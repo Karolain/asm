@@ -1,0 +1,15 @@
+<section class="top-section">
+	<div class="logo"></div>
+	<nav>
+		<a [routerLink]="['/']" class="fa fa-home">Dashboard</a>
+		<a [routerLink]="['/schedules']" class="fa fa-calendar">Schedules</a>
+		<a [routerLink]="['/import']" class="fa fa-level-down">Import schedule</a>
+	</nav>
+</section>
+<section class="main-section">
+	<section class="left-section"></section>
+	<section class="middle-section">
+		<router-outlet></router-outlet>
+	</section>
+	<section class="right-section"></section>
+</section>

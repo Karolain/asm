@@ -54,7 +54,7 @@ function bundle(b) {
 }
 
 function transformSass() {
-	return gulp.src(dirs.src + '/app.scss')
+	return gulp.src(dirs.src + '/styles.scss')
 		.pipe(sass({style: 'compressed'}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: [
@@ -74,5 +74,5 @@ function copyFiles() {
 	gulp.src(dirs.src + '/**/*.html').pipe(gulp.dest(dirs.dest));
 	gulp.src(dirs.src + '/resources/fonts/**/*.*').pipe(gulp.dest(dirs.dest + '/resources/fonts'));
 	gulp.src(dirs.src + '/resources/images/**/*.*').pipe(gulp.dest(dirs.dest + '/resources/images'));
-	// gulp.src('node_modules/angular2/bundles/angular2-polyfills.min.js').pipe(gulp.dest(dirs.dest + '/resources'));
+	// gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/*.*').pipe(gulp.dest(dirs.dest + '/resources/fonts/bootstrap'));
 }
