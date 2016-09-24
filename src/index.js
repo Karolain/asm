@@ -1,12 +1,19 @@
-import 'babel-polyfill';
+import 'es6-shim';
+import 'es6-promise';
+import 'reflect-metadata';
+
 import 'zone.js/dist/zone';
+import 'zone.js/dist/long-stack-trace-zone';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
 
-import {ScheduleManagementApp} from './app.component';
-import {APP_ROUTER_PROVIDERS} from './app.routes';
+import {AppModule} from './core/app.module';
 
+if (ENVIRONMENT === 'production') {
+    enableProdMode();
+}
 
-bootstrap(ScheduleManagementApp, [
-	APP_ROUTER_PROVIDERS
-]).catch(err => window.console.error(err));
+platformBrowserDynamic().bootstrapModule(AppModule);

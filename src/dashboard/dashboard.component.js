@@ -2,10 +2,10 @@ import {Component} from '@angular/core';
 
 @Component({
 	selector: 'asm-dashboard',
-	templateUrl: './dashboard/dashboard.html'
+	templateUrl: './dashboard/dashboard.template.html'
 })
 
-export class Dashboard {
+export class DashboardComponent {
 	constructor() {
 
 	}

@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
 	selector: 'asm-location',
 	templateUrl: '{{name}}'
 })
-export class Location {
+export class LocationComponent {
 	constructor() {
 		this.location = {
 			id: null,

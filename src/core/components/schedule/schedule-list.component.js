@@ -1,13 +1,10 @@
 import {Component} from '@angular/core';
-import {Schedule} from './schedule';
-
 
 @Component({
 	selector: 'asm-schedule-list',
-	templateUrl: './schedules/scheduleList.html',
-	directives: [Schedule]
+	templateUrl: './core/components/schedule/schedule-list.template.html'
 })
-export class ScheduleList {
+export class ScheduleListComponent {
 
 	constructor() {
 		this.schedules = [];
