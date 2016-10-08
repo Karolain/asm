@@ -12,7 +12,7 @@ import {AUTH_PROVIDERS, AUTH_DECLARATIONS} from '../auth';
 @NgModule({
     declarations: [
         CORE_DECLARATIONS,
-        AUTH_DECLARATIONS,
+        AUTH_DECLARATIONS
     ],
     imports: [
         HttpModule,
@@ -23,7 +23,7 @@ import {AUTH_PROVIDERS, AUTH_DECLARATIONS} from '../auth';
         RouterModule.forRoot(routes)
     ],
     providers: [
-        CORE_PROVIDERS, AUTH_PROVIDERS, POSTS_PROVIDERS,
+        CORE_PROVIDERS, AUTH_PROVIDERS,
         {provide: 'ENVIRONMENT', useValue: ENVIRONMENT}
     ],
     bootstrap: [AppComponent]

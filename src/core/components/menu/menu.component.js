@@ -1,12 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
-import template from './menu.template.html';
 import { UserService } from '../../../auth';
 
 @Component({
   selector: 'top-menu',
-  template: template,
+  template: require('./menu.template.html'),
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuComponent {

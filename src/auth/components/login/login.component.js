@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import template from './login.template.html';
 import { UserService } from '../../services/user/user.service';
-import { validatorFactory } from '../../../posts/validator';
 
 @Component({
   selector: 'login',
-  template: template
+  template: require('./login.template.html')
 })
 export class LoginComponent {
 
@@ -17,7 +15,7 @@ export class LoginComponent {
     this._router = router;
 
     this.loginForm = builder.group({
-      email: ['', [Validators.required, validatorFactory('email')]],
+      email: ['', [Validators.required]],
       password: ['', Validators.required]
     });
   }

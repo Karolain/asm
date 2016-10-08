@@ -1,14 +1,12 @@
 import {Component, Input} from '@angular/core';
-import {Event} from '../event/event';
-import {EventService} from '../services/eventService';
+import {EventService} from '../../services/event/event.service';
 
 
 @Component({
 	selector: 'asm-schedule',
-	templateUrl: './schedules/schedule.html',
-	directives: [Event]
+	template: require('./schedule.template.html')
 })
-export class Schedule {
+export class ScheduleComponent {
 	@Input() scheduleId;
 
 	constructor(eventService: EventService) {

@@ -12,17 +12,17 @@ export class BackendExpectation {
   }
 
   verify(connection) {
-    expect(connection.request.url).toEqual(this.options.url, 'Request url missmatch.');
-    expect(connection.request.method).toEqual(this.options.method, 'Request method missmatch.');
+    expect(connection.request.url).toEqual(this.options.url, 'Request url mismatch.');
+    expect(connection.request.method).toEqual(this.options.method, 'Request method mismatch.');
     if (this.options.hasOwnProperty('body')) {
-      expect(connection.request.text()).toEqual(this.options.body, 'Request body missmatch.');
+      expect(connection.request.text()).toEqual(this.options.body, 'Request body mismatch.');
     }
 
     if (this.options.hasOwnProperty('headers')) {
       for (let header in this.options.headers) {
         if (this.options.headers.hasOwnProperty(header)) {
           expect(connection.request.headers.get(header))
-            .toEqual(this.options.headers[header], `Request header missmatch for ${header}.`);
+            .toEqual(this.options.headers[header], `Request header mismatch for ${header}.`);
         }
       }
     }

@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'about',
-  template: require('!raw!./about.template.html'),
-  styleUrls: ['css/about.css']
+  template: require('./about.template.html')
 })
 export class AboutComponent {
 }

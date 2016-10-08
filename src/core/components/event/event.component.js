@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {EventService} from './event.service';
+import {EventService} from '../../index';
 
 @Component({
     selector: 'asm-event',
-    templateUrl: './core/components/event/event.template.html'
+    template: require('./event.template.html')
 })
 export class EventComponent {
 

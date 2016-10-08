@@ -5,5 +5,5 @@ module.exports = {
     base: 'src',
     source: ['src/**/*.js'],
     resource: ['src/**/*.{html,css,ico}', 'src/resources/fonts/**/*.*', 'src/resources/images/**/*.*'],
-    destination: 'dist',
+    destination: 'dist'
 };
