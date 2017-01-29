@@ -7,7 +7,6 @@ let clientBuildTask = require('./tasks/build');
 let clientTestTask = require('./tasks/test');
 let stylesheetTask = require('./tasks/stylesheet');
 let cleanTask = require('./tasks/clean');
-let eslintTask = require('./tasks/eslint');
 
 gulp.task('copy-watch', clientCopyTask(false));
 gulp.task('copy', clientCopyTask(true));
@@ -17,7 +16,6 @@ gulp.task('test', clientTestTask(true));
 gulp.task('test-watch', clientTestTask(false));
 gulp.task('stylesheet-watch', stylesheetTask(false));
 gulp.task('stylesheet', stylesheetTask(true));
-gulp.task('eslint', eslintTask());
 gulp.task('clean', cleanTask());
 
 gulp.task('watch', function (done) {
