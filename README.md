@@ -17,3 +17,10 @@ or
 ```
 gulp build
 ```
+
+## Preview
+```
+npm install -g http-server
+http-server dist
+```
+
