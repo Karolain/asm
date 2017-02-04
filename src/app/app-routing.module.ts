@@ -6,8 +6,7 @@ import { NoContentComponent } from './no-content';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'schedules', loadChildren: './schedule/schedule.module#ScheduleModule'},
-  { path: '**',    component: NoContentComponent },
+  { path: '**',    component: NoContentComponent }
 ];
 
 @NgModule({

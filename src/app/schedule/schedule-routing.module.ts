@@ -3,8 +3,10 @@ import {Routes, RouterModule} from '@angular/router';
 import {ScheduleListComponent} from "./schedule-list.component";
 
 const routes: Routes = [
-    {path: '', component: ScheduleListComponent, pathMatch: 'full'},
-    {path: ':id', component: ScheduleListComponent}
+    {path: 'schedules', children: [
+        {path: '', component: ScheduleListComponent},
+        {path: ':id', component: ScheduleListComponent}
+    ]},
 ];
 
 @NgModule({
