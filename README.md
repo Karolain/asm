@@ -2,20 +2,24 @@
 
 Front-end design for Assembly Organizing's Schedule Management Application using Angular 2 with Webpack.
 
-## Install
+## Install required dependencies
 
 ```
 npm install
 ```
+Make sure to have Node version 6 or later installed and npm version 3 or later.
+
+## Preview and development build
+
+```
+npm run start
+```
+Applicatrion will be visible at localhost:8080, any changes to code will be compiled automatically.
 
 ## Build for production
 
 ```
 npm run build
 ```
-
-## Preview
-```
-npm run start
-```
+Builds application into dist-folder.
 

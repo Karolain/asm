@@ -8,6 +8,7 @@ import {HomeComponent} from './home';
 import {NoContentComponent} from './no-content';
 import {AppService} from "./app.service";
 import {ScheduleModule} from "./schedule/schedule.module";
+import {ScheduleService} from "./schedule/schedule.service";
 
 import '../main.scss';
 
@@ -25,7 +26,8 @@ import '../main.scss';
         ScheduleModule
     ],
     providers: [
-        AppService
+        AppService,
+        ScheduleService
     ]
 })
 export class AppModule {

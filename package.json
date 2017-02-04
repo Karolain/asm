@@ -61,7 +61,7 @@
     "url": "https://github.com/Karolain/asm/issues"
   },
   "engines": {
-    "node": ">= 4.2.1",
+    "node": ">= 6.9.5",
     "npm": ">= 3"
   }
 }
