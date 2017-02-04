@@ -20,10 +20,14 @@ module.exports = {
 		rules: [
 			{
 				test: /\.ts$/,
-				loaders: [{
-					loader: 'awesome-typescript-loader',
-					options: { configFileName: helpers.root('tsconfig.json') }
-				} , 'angular2-template-loader']
+				loaders: [
+					{
+						loader: 'awesome-typescript-loader',
+						options: {configFileName: helpers.root('tsconfig.json')}
+					},
+					'angular2-template-loader',
+					'angular-router-loader'
+				]
 			},
 			{
 				test: /\.html$/,
@@ -36,7 +40,7 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader!sass-loader' })
+				loader: ExtractTextPlugin.extract({fallbackLoader: 'style-loader', loader: 'css-loader!sass-loader'})
 			},
 			{
 				test: /\.scss$/,

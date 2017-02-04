@@ -4,11 +4,11 @@ import {AppService} from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./app.component.scss'],
   template: `
     <nav>
-      <a [routerLink]=" ['./'] " routerLinkActive="active">
-        Index
-      </a>
+      <a [routerLink]="'home'" routerLinkActive="active">Home</a>
+      <a [routerLink]="'schedules'" routerLinkActive="active">Schedules</a>
     </nav>
     <main>
       <router-outlet></router-outlet>

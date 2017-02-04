@@ -1,10 +1,13 @@
 @import 'resources/variables';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
+  background: $background;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {

@@ -1,14 +1,13 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
 import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {MaterialModule} from '@angular/material';
 
-import {ROUTES} from './app.routes';
+import {AppRoutingModule} from './app-routin.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home';
 import {NoContentComponent} from './no-content';
 import {AppService} from "./app.service";
+import {ScheduleModule} from "./schedule/schedule.module";
 
 import '../main.scss';
 
@@ -21,9 +20,9 @@ import '../main.scss';
     ],
     imports: [
         BrowserModule,
-        FormsModule,
-        HttpModule,
-        RouterModule.forRoot(ROUTES)
+        AppRoutingModule,
+        MaterialModule.forRoot(),
+        ScheduleModule
     ],
     providers: [
         AppService

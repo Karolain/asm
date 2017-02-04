@@ -1,14 +1,10 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'home',
-    encapsulation: ViewEncapsulation.None,
     template: `<div>Home</div>`
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
     constructor() {}
-
-    public ngOnInit() {
-    }
 }

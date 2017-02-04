@@ -1,6 +1,6 @@
 # ASM - Assembly Schedule Management
 
-Front-end design for Assembly Organizing's Schedule Management Application using Angular 2 with Babel.
+Front-end design for Assembly Organizing's Schedule Management Application using Angular 2 with Webpack.
 
 ## Install
 
@@ -8,19 +8,14 @@ Front-end design for Assembly Organizing's Schedule Management Application using
 npm install
 ```
 
-## Build
+## Build for production
 
 ```
 npm run build
 ```
-or
-```
-gulp build
-```
 
 ## Preview
 ```
-npm install -g http-server
-http-server dist
+npm run start
 ```
 
