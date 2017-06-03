@@ -1,0 +1,16 @@
+@import '../../resources/variables';
+
+:host {
+    md-list-item {
+        border-top: 1px solid $listBorder;
+        border-bottom: 1px solid $listBorder;
+    }
+    .schedule-actions {
+        display: flex;
+        flex-direction: row;
+
+        button {
+            margin: 0 0.5em;
+        }
+    }
+}

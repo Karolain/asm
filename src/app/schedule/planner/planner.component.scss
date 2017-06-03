@@ -1,0 +1,39 @@
+@import '../../../resources/variables';
+:host {
+    
+    .planner-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 0;
+    }
+    .planner-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        button {
+            margin-left: 1em;
+        }
+    }
+    .planner-content {
+        
+        .planner-view {
+            display: flex;
+            flex-direction: row;
+
+            .column-wrapper {
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                margin: 0 0.5em;
+                background-color: $planner-column;
+                width: 150px;
+
+                &.time {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

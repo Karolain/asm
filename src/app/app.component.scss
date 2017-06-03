@@ -32,3 +32,37 @@ nav {
 main {
   padding: 2em;
 }
+
+button {
+  background: $buttonBackground;
+  color: $buttonText;
+  width: auto;
+  height: $button-height;
+  padding: 0.5em 1em;
+  border: 0;
+  display: inline-block;
+  white-space: nowrap;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background: $buttonHover;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+  }
+
+  md-icon {
+    vertical-align: middle;
+  }
+              
+  span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  md-icon + span {
+    margin-left: 0.5em;
+  }
+}

@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {AppService} from './app.service';
 
 @Component({
-  selector: 'app',
+  selector: 'asm-app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./app.component.scss'],
   template: `
