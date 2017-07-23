@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { Schedule, ScheduleStatus } from "../schedule";
+import { Schedule } from "../schedule";
 
 @Component({
     selector: 'asm-planner',
@@ -34,9 +34,5 @@ export class SchedulePlannerComponent implements OnInit {
 
     onAddNewLocation() {
 
-    }
-    
-    isEditable(schedule: Schedule) {
-        return [ScheduleStatus.Draft, ScheduleStatus.Published].indexOf(schedule.status) !== -1;
     }
 }

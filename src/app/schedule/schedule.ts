@@ -2,15 +2,12 @@ import { EventLocation } from "./event/location/location";
 import { Event } from "./event/event";
 
 export interface Schedule {
-    id: number;
+    key: string;
     name: string;
-    status: ScheduleStatus;
+    website: string;
+    startsAt: Date;
+    endsAt: Date;
+    active: boolean;
     events: Event[];
     locations: EventLocation[];
-}
-
-export const enum ScheduleStatus {
-    Draft,
-    Published,
-    Closed
 }

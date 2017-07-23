@@ -7,8 +7,8 @@ import { ScheduleService } from "./schedule.service";
 export class ScheduleResolver implements Resolve<Schedule> {
   constructor(private ss: ScheduleService, private router: Router) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<Schedule> {
-    let id = route.params['id'];
-    return this.ss.getSchedule(id).then((schedule: Schedule) => {
+    let key = route.params['id'];
+    return this.ss.getSchedule(key).then((schedule: Schedule) => {
       if (schedule) {
         return schedule;
       } else {

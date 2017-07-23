@@ -6,16 +6,21 @@ import { Event } from "./event/event";
 export class ScheduleService {
     private schedules = [
         {
-            id: 0, 
+            key: 'asmw17', 
             name: 'Assembly Winter 2017', 
-            status: 2,
+            active: true,
+            startsAt: new Date(2017, 1, 3, 10),
+            endsAt: new Date(2017, 1, 5, 16),
             events: [] as Event[],
             locations: [] as EventLocation[]
         },
         { 
-            id: 1, 
+            key: 'asms17', 
             name: 'Assembly Summer 2017', 
-            status: 0,
+            description: 'The best event of the year',
+            status: false,
+            startsAt: new Date(2017, 7, 3, 10),
+            endsAt: new Date(2017, 7, 6, 16),
             events: [] as Event[],
             locations: [
                 {
@@ -36,7 +41,8 @@ export class ScheduleService {
         return Promise.resolve(this.schedules);
     }
 
-    getSchedule(id: number) {
-        return Promise.resolve(this.schedules[id]);
+    getSchedule(key: string) {
+        let schedule = this.schedules.find(s => s.key === key);
+        return Promise.resolve(schedule);
     }
 }

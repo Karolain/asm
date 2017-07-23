@@ -4,7 +4,11 @@
         <md-list-item *ngFor="let schedule of schedules  | async">
             <md-icon md-list-icon>today</md-icon>
             <h4 md-line>{{schedule.name}}</h4>
-            <p md-line> {{statuses[schedule.status]}} </p>
+            <p md-line>{{getStatus(schedule.active)}}</p>
+            <p md-line>
+                {{schedule.startsAt | date:"dd.MM.yyyy"}} - {{schedule.endsAt | date:"dd.MM.yyyy"}}
+                <span>{{schedule.description}}</span>
+            </p>
             <div class="schedule-actions">
                 <button (click)="onEditSchedule(schedule)">
                     <md-icon>edit</md-icon>

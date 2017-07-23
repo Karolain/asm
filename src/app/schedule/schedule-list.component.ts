@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { Schedule, ScheduleStatus } from "./schedule";
+import { Schedule } from "./schedule";
 import {ScheduleService} from "./schedule.service";
 import { Router, ActivatedRoute } from "@angular/router";
 
@@ -10,7 +10,6 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class ScheduleListComponent implements OnInit {
     schedules: Promise<Schedule[]>;
-    statuses: string[] = ["Draft", "Published", "Closed" ];
 
     constructor(
         private scheduleService: ScheduleService,
@@ -22,9 +21,12 @@ export class ScheduleListComponent implements OnInit {
         this.schedules = this.scheduleService.getSchedules();
     }
 
+    getStatus(isActive: boolean) {
+        return isActive ? "Published" : "Unpublished";
+    }
+
     onEditSchedule(schedule: Schedule) {
-        
-        this.router.navigate([schedule.id], { relativeTo: this.route });
+        this.router.navigate([schedule.key], { relativeTo: this.route });
     }
 
     onShareSchedule(schedule: Schedule) {

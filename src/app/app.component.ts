@@ -12,6 +12,7 @@ import {AppService} from './app.service';
     </nav>
     <main>
       <router-outlet></router-outlet>
+      <router-outlet name="popup"></router-outlet>
     </main>
   `
 })
