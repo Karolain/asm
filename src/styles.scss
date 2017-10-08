@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import "./material-icons";
+@import "./mixins";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: $asm-background;
+    font-family: 'Roboto', sans-serif;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+nav {
+    border-bottom: 1px solid $asm-border;
+    box-shadow: 0 1px 10px $asm-border;
+
+    a {
+        color: $asm-nav-color;
+        border-bottom: 4px solid transparent;
+        position: relative;
+        overflow: hidden;
+        transition: border-bottom-color .1s .2s ease;
+
+        span {
+            z-index: 1;
+        }
+
+        &.active {
+            // color: $asm-nav-active;
+            border-bottom-color: $asm-nav-active;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: $asm-nav-active;
+            width: 100%;
+            height: 100%;
+            display: block;
+            transform: translateY(100%);
+            transition: transform .2s ease-in-out;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+        }
+    
+        &:hover {
+            border-bottom-color: $asm-nav-active;
+            transition: none;
+            &:after {
+                transform: translateY(0);
+                transition: transform .2s ease-in-out;
+            }
+        }
+    }
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    align-items: center;
+    padding: 1em;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 4px solid $asm-highlight;
+    margin: 0 2px;
+    text-decoration: none;
+    color: black;
+
+    .m-icon {
+        margin-right: 5px;
+        z-index: 1;
+    }
+    span {
+        z-index: 1;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        background-color: $asm-highlight;
+        width: 100%;
+        height: 100%;
+        display: block;
+        transform: translateY(100%);
+        transition: transform .2s ease-in-out;
+        z-index: 0;
+        left: 0;
+    }
+
+    &:hover {
+        &:after {
+            transform: translateY(0);
+            transition: transform .2s ease-in-out;
+        }
+    }
+}

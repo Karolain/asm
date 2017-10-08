@@ -1,0 +1,27 @@
+<h1>
+  Schedules</h1>
+<div class="schedule-list">
+  <div class="schedule-item" *ngFor="let schedule of schedules  | async">
+    <div class="item-content">
+      <i class="m-icon">today</i>
+      <div class="item-header">
+        <h4>{{schedule.name}}</h4>
+        <span class="status">{{getStatus(schedule.active)}}</span>
+      </div>
+      <p>
+        <span>{{schedule.startsAt | date:"dd.MM.yyyy"}} - {{schedule.endsAt | date:"dd.MM.yyyy"}}</span>
+        <span>{{schedule.description}}</span>
+      </p>
+    </div>
+    <div class="item-actions">
+      <a class="btn" [routerLink]="schedule.shortname">
+        <i class="m-icon">edit</i>
+        <span>Edit</span>
+      </a>
+      <span class="btn" (click)="onShareSchedule(schedule)">
+        <i class="m-icon">share</i>
+        <span>Share</span>
+      </span>
+    </div>
+  </div>
+</div>

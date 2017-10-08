@@ -1,0 +1,10 @@
+$asm-highlight: #ace;
+$asm-background: #fbfbfb;
+$asm-border: #ebebeb;
+$asm-nav-color: #000;
+$asm-nav-active: $asm-highlight;
+
+@mixin centeredContent {
+    max-width: 1430px;
+    margin: 0 auto;
+}

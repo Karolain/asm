@@ -1,0 +1,9 @@
+<nav>
+  <div class="logo"></div>
+  <a [routerLink]="'home'" routerLinkActive="active"><span>Home</span></a>
+  <a [routerLink]="'schedules'" routerLinkActive="active"><span>Schedules</span></a>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
+</main>

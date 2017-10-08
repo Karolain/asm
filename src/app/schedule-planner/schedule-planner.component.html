@@ -1,0 +1,27 @@
+<div class="planner-header">
+  <h2>{{schedule.name}}</h2>
+  <div class="planner-actions">
+      <button (click)="onEditDetails($event)" type="button"><i class="m-icon">edit</i><span>Edit details</span></button>
+      <button (click)="onBackToList($event)" type="button"><i class="m-icon">arrow_back</i><span>Back to list</span></button>
+  </div>
+</div>
+<div class="planner-content">
+  <div class="planner-actions">
+      <button (click)="onAddNewEvent($event)" type="button"><i class="m-icon">event</i><span>Add new event</span></button>
+      <button (click)="onAddNewLocation($event)" type="button"><i class="m-icon">add_location</i><span>Add new location</span></button>
+  </div>
+  <div class="planner-view">
+      <div class="column-wrapper time">
+          <div class="column-header">Time</div>
+          <div class="column-content">
+
+          </div>
+      </div>
+      <div class="column-wrapper" *ngFor="let location of schedule.locations">
+          <div class="column-header">{{location.name}}</div>
+          <div class="column-content">
+
+          </div>
+      </div>
+  </div>
+</div>

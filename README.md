@@ -1,25 +1,29 @@
-# ASM - Assembly Schedule Management
+# Schedule Management UI
 
-Front-end design for Assembly Organizing's Schedule Management Application using Angular 2 with Webpack.
+Front-end design for Assembly Organizing's Schedule Management Application.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 
-## Install required dependencies
+## Development server
 
-```
-npm install
-```
-Make sure to have Node version 6 or later and npm version 3 or later installed.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Preview and development build
+## Code scaffolding
 
-```
-npm run start
-```
-Application will be visible at localhost:8080, any changes to code will be compiled automatically.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build for production
+## Build
 
-```
-npm run build
-```
-Builds application into dist-folder.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
